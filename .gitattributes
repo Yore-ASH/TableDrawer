@@ -1,0 +1,12 @@
+# 统一换行符，避免 Windows / Linux 之间的 CRLF 噪声
+* text=auto eol=lf
+
+# 二进制 / 数据文件不做换行符转换（示例 CSV 保持字节原样）
+*.csv -text
+*.png binary
+*.jpg binary
+*.pdf binary
+*.ico binary
+
+*.md text
+*.py text

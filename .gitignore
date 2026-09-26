@@ -1,0 +1,47 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# ---- 运行期缓存 ----
+# LaTeX 位图缓存（%LOCALAPPDATA%\TableDrawer\latex-cache 在用户目录下，
+# 这里只防呆：万一有人在项目里生成）
+.cache/
+latex-cache/
+
+# ---- manim / 渲染产物 ----
+media/
+*.mp4
+*.webm
+*.mov
+*.gif
+*.pgf
+
+# ---- 导出的图片与结果（示例截图见 docs/screenshots，是要提交的）----
+/figure.svg
+/figure.png
+/result.svg
+/matrix_result.*
+
+# ---- 编辑器与系统 ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 临时文件（只忽略项目根目录下的下划线临时文件；
+#      注意不能写成 _*.py —— 那会把 __init__.py 也一起忽略掉）----
+_scratch/
+/_*.py
+/_*.png
+/_*.txt
+*.log
