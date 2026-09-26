@@ -148,7 +148,7 @@ class MatrixTab(QWidget):
         self.editor_combo = QComboBox()
         self.editor_combo.setToolTip("选择当前要编辑的矩阵")
         self.editor_combo.currentIndexChanged.connect(self._on_editor_selected)
-        add_matrix_btn = QPushButton("＋ 新增矩阵")
+        add_matrix_btn = QPushButton("+ 新增矩阵")
         add_matrix_btn.setProperty("accent", "true")
         add_matrix_btn.setToolTip("添加一个新的矩阵（C、D、E…），可以一起参与运算与 manim 动画")
         add_matrix_btn.clicked.connect(lambda: self.add_matrix())

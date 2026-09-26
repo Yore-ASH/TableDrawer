@@ -98,8 +98,15 @@ def main() -> int:
     win.tabs.setCurrentIndex(2)
     matrix_tab = win.matrix_tab
     matrix_tab.editor_a.set_matrix([[4, -2, 1], [3, 6, -1], [2, 1, 8]])
+    matrix_tab.editor_b.set_matrix([[1], [1], [1]])
+    # 演示「新增矩阵」：再加一个 C，并可被选为主/副矩阵参与运算
+    matrix_tab.add_matrix("C").set_matrix([[1, 0, 2], [0, 1, 0], [3, 0, 1]])
+    matrix_tab.main_combo.setCurrentText("A")
+    matrix_tab.other_combo.setCurrentText("B")
+    matrix_tab.editor_combo.setCurrentText("A")
+    app.processEvents()
     matrix_tab.run_common()
-    for _ in range(40):                              # 队列里是一个一个渲染的
+    for _ in range(40):                              # 队列里是一块一块渲染的
         app.processEvents()
         settle(120)
         if __import__("ui.widgets", fromlist=["latex_pixmaps"]).latex_pixmaps().pending() == 0:
